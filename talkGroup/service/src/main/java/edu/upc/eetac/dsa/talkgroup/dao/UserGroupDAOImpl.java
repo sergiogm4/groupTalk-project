@@ -71,7 +71,7 @@ public class UserGroupDAOImpl implements UserGroupDAO{
         try {
             connection = Database.getConnection();
 
-            stmt = connection.prepareStatement(UserGroupDAOQuery.LEAVE_GROUP);
+            stmt = connection.prepareStatement(UserGroupDAOQuery.CHECK_GROUP_FROM_ID );
             stmt.setString(1, userid);
             stmt.setString(2, groupid);
 
